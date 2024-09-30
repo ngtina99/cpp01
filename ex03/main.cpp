@@ -12,14 +12,6 @@
 
 #include "HumanA.hpp"
 #include "HumanB.hpp"
-// In which case do you think it would be best to use a pointer to
-// Weapon? And a reference to Weapon? Why? Think about it before
-// starting this exercise.
-
-// will print an attack
-// with "crude spiked club" then a second attack with
-// "some other type of club" for both
-// test cases:
 
 int main()
 {
