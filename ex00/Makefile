@@ -1,8 +1,8 @@
 NAME = zombie
 
-SRC = main.cpp PhoneBook.cpp Contact.cpp
+SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 OBJ = $(SRC:.cpp=.o)
-HEADER = PhoneBook.hpp Contact.hpp
+HEADER = Zombie.hpp
 
 CC = c++
 RM = rm -f
