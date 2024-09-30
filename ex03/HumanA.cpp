@@ -10,7 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "HumanA.hpp"
 
-		attack(); that displays (of course, without the
-angle brackets):
-<name> attacks with their <weapon type>
+HumanA::HumanA( std::string humanName, Weapon &weaponTool) 
+	: _name(humanName), _weapon(weaponTool)
+{
+	return ;
+}
+
+HumanA::~HumanA()
+{
+	return ;
+}
+
+void	HumanA::attack()
+{
+	std::cout << this->_name << " attacks with their " << this->_weapon.getType() << ".\n";
+}

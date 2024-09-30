@@ -22,11 +22,12 @@ class HumanA
 		HumanA(std::string humanName, Weapon &weaponTool);
 		~HumanA();
 		void	attack();
+
 	private:
 
-		std::string _weapon;
 		std::string _name;
+		Weapon &_weapon;
 
-}
+};
 
 #endif

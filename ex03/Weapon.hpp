@@ -27,7 +27,7 @@ class Weapon
 
 	private:
 
-		std::string _type
-}
+		std::string _type;
+};
 
 #endif
