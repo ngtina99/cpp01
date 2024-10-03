@@ -20,8 +20,9 @@ enum	complainType
 	DEBUG,
 	INFO,
 	WARNING,
-	ERROR
-}
+	ERROR,
+	ERROR_PLUS
+};
 
 class Harl
 {
@@ -38,6 +39,6 @@ class Harl
 		void warning( void );
 		void error( void );
 
-}
+};
 
 #endif

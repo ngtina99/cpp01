@@ -24,46 +24,57 @@ Harl::~Harl()
 
 
 void	Harl::debug( void )
-{
-	std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. 
-	I really do!" << std::endl;
+{	
+	std::cout << "[ DEBUG ]\n" <<
+	"I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger.\nI really do!\n" << std::endl;
 }
 
 void	Harl::info( void )
 {
-	std::cout << "I cannot believe adding extra bacon costs more money. 
-	You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
+	std::cout << "[ INFO ]\n" <<
+	"I cannot believe adding extra bacon costs more money.\nYou didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!\n" << std::endl;
 }
 
 void	Harl::warning( void )
 {
-	std::cout << "I think I deserve to have some extra bacon for free. 
-	I’ve been coming for years whereas you started working here since last month." << std::endl;
+	std::cout << "[ WARNING ]\n" <<
+	"I think I deserve to have some extra bacon for free.\nI’ve been coming for years whereas you started working here since last month.\n" << std::endl;
 }
 
 void	Harl::error( void )
 {
-	std::cout << "This is unacceptable!
-	I want to speak to the manager now." << std::endl;
+	std::cout << "[ ERRROR ]\n" <<
+	"This is unacceptable! I want to speak to the manager now.\n" << std::endl;
 }
 
 void	Harl::complain( std::string level )
 {
-	switch( level )
+	std::string levelType[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	void (Harl::*memberFunctionPointer[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error}; 
+
+	int i = DEBUG;
+	while (i < ERROR_PLUS && level != levelType[i])
+		i++;
+	while (i <= ERROR_PLUS)
 	{
-		case "DEBUG":
-			cout << "Today is Sunday";
-			break;
-		case "INFO":
-			cout << "Today is Sunday";
-			break;
-		case "WARNING":
-			cout << "Today is Sunday";
-			break;
-		case "INPUT":
-			cout << "Today is Sunday";
-			break;
-		default:
-			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		switch( i )
+		{
+			case DEBUG:
+				(this->*memberFunctionPointer[i])();
+				break;
+			case INFO:
+				(this->*memberFunctionPointer[i])();
+				break;
+			case WARNING:
+				(this->*memberFunctionPointer[i])();
+				break;
+			case ERROR:
+				(this->*memberFunctionPointer[i])();
+				break;
+			default:
+				std::cerr << "[ Probably complaining about insignificant problems ]\n" << std::endl;
+				break;
+		}
+		i++;
 	}
 }
