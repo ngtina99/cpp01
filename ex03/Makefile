@@ -1,4 +1,4 @@
-NAME = test
+NAME = weapon
 
 SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJ = $(SRC:.cpp=.o)
@@ -12,7 +12,7 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 all: $(NAME)
 
 $(NAME): $(HEADER) $(OBJ)
-	$(CC) $(CPPFLAGS) $(HEADER) $(OBJ) -o $(NAME)
+	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) $(OBJ)
