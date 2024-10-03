@@ -18,6 +18,5 @@ int	main(int argc, char **argv)
 	if (argc == 2)
 		harl.complain(argv[1]);
 	else
-		harl.complain("irrelevant string");
-	return (EXIT_SUCCESS); //or let's see if less than this 
+		std::cerr << "Please put (only) one argument" << std::endl;
 }
