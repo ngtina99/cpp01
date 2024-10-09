@@ -16,6 +16,7 @@ $(NAME): $(HEADER) $(OBJ)
 
 clean:
 	$(RM) $(OBJ)
+
 fclean: clean
 	$(RM) $(NAME)
 

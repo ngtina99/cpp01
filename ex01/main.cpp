@@ -43,6 +43,8 @@ int	main(int argc, char **argv)
 		int N = atoi(argv[1]);
 		std::string name = argv[2];
 		Zombie *zombies = zombieHorde(N, name);
+		for (int i = 0; i < N; i++)
+			zombies[i].announce();
 		if (zombies)
 			delete [] zombies;
 	}

@@ -12,18 +12,24 @@
 
 #include "Zombie.hpp"
 
+Zombie::Zombie()
+{
+	std::cout << _name << " quit" << std::endl;
+	return;
+}
+
 Zombie::Zombie(std::string zombieName) : _name(zombieName)
 {
-	return ;
+	return;
 }
 
 Zombie::~Zombie()
 {
-	std::cout << _name <<  " quit" << std::endl;
-	return ;
+	std::cout << _name << " quit" << std::endl;
+	return;
 }
 
-void	Zombie::announce( void )
+void Zombie::announce(void)
 {
-	std::cout << this->_name <<  ": BraiiiiiiinnnzzzZ...\n";
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ...\n";
 }

@@ -15,7 +15,7 @@
 Zombie* newZombie( std::string name )
 {
 	Zombie *pointZombie = new Zombie(name);
-	pointZombie->announce();
+	// pointZombie->announce();
 	return (pointZombie);
 }
 

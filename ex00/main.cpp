@@ -52,7 +52,8 @@
 
 int main() 
 {
-	Zombie *zombie = newZombie("Heapo");
 	randomChump("Stacko");
+	Zombie *zombie = newZombie("Heapo");
+	zombie->announce();
 	delete zombie;
 }

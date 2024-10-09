@@ -22,14 +22,13 @@ class HumanB
 		HumanB(std::string humanName);
 		~HumanB();
 		void	attack();
-		void	setWeapon(Weapon& weaponTool);
+		void	setWeapon(Weapon &weaponTool);
 
 	private:
 
 		std::string _name;
-		bool	_hasWeapon;
 		Weapon *_weapon;
+
 };
 
 #endif
-

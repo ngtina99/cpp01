@@ -17,12 +17,10 @@ Zombie	*zombieHorde( int N , std::string zombieName )
 	Zombie	*zombies = new Zombie[N];
 	if (!zombies)
 	{
-		std::cerr << "Malloc error" << std::endl;
+		std::cerr << "Memory error" << std::endl;
 		return (NULL);
 	}
 	for (int i = 0; i < N; i++)
 		zombies[i].setName(zombieName);
-	for (int i = 0; i < N; i++)
-		zombies[i].announce();
 	return (zombies);
 }

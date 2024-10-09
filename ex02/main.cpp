@@ -20,11 +20,11 @@ int	main()
 	std::string	&stringREF = string;
 
 	std::cout 
-	<< "Memory address of string: "				<< &string << "\n"
+	<< "Memory address of string	  : "	<< &string << "\n"
 	<< "Memory address stored in stringPTR: "	<< stringPTR << "\n"
 	<< "Memory address stored in stringREF: "	<< &stringREF << "\n"
 
-	<< "Value of string: " 						<< string << "\n"
+	<< "Value of string		     : " 		<< string << "\n"
 	<< "Value pointed to by stringPTR: "		<< *stringPTR << "\n"
 	<< "Value pointed to by stringREF: "		<< stringREF << std::endl;
 
