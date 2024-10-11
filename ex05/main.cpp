@@ -12,10 +12,6 @@
 
 #include "Harl.hpp"
 
-// The goal of this exercise is to use pointers to member functions. This is not a
-// suggestion. Harl has to complain without using a forest of if/else if/else. It doesn’t think
-// twice!
-
 int	main()
 {
 	Harl harl;

@@ -58,10 +58,3 @@ void	Harl::complain( std::string level )
 	(this->*memberFunctionPointer[i])();
 	return ;
 }
-
-// this->*: This is required to dereference the pointer to the member 
-// function. this refers to the current instance of the class, 
-// and * is used to dereference the pointer to the member function.
-// *(memberFunctionPointer[i])() does not work because you can't dereference the 
-// function pointer without specifying the class instance (this). It would result 
-// in a syntax error since you're not telling the compiler which object the function should operate on

@@ -55,6 +55,15 @@ void	Harl::complain( std::string level )
 	int i = DEBUG;
 	while (i < ERROR_PLUS && level != levelType[i])
 		i++;
+	bool otherProblem;
+	switch( i )
+	{
+		case ERROR_PLUS:
+			otherProblem = true;
+			break ;
+		default:
+			otherProblem = false;
+	}
 	while (i <= ERROR_PLUS)
 	{
 		switch( i )
@@ -72,7 +81,8 @@ void	Harl::complain( std::string level )
 				(this->*memberFunctionPointer[i])();
 				break;
 			default:
-				std::cerr << "[ Probably complaining about insignificant problems ]\n" << std::endl;
+				if (otherProblem)
+					std::cerr << "[ Probably complaining about insignificant problems ]\n" << std::endl;
 				break;
 		}
 		i++;

@@ -14,9 +14,14 @@
 
 int	main(int argc, char **argv)
 {
-		Harl harl;
-	if (argc == 2)
-		harl.complain(argv[1]);
-	else
-		std::cerr << "Please put (only) one argument" << std::endl;
+	Harl	harl;
+	switch( argc )
+	{
+		case 2:
+			harl.complain(argv[1]);
+			break ;
+		default:
+			std::cerr << "Please put (only) one argument with no spaces" << std::endl;
+			std::cerr << "from the following: DEBUG, INFO, WARNING, ERROR or else" << std::endl;
+	}
 }

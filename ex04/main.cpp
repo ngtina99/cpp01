@@ -27,10 +27,10 @@ std::string replaceStrings(std::string newFileContent, std::string s1, std::stri
 			resultContent += newFileContent.substr(indexChar);
 			break;
 		}
-		resultContent += newFileContent.substr(indexChar, foundIndex - indexChar);
+		resultContent += newFileContent.substr(indexChar, (foundIndex - indexChar));
 		resultContent += s2;
 		indexChar = foundIndex + s1.size();
-    }
+	}
 	return (resultContent);
 }
 
@@ -44,15 +44,19 @@ int main(int argc, char **argv)
 	std::ifstream srcFile(argv[1]);
 	if (!srcFile.is_open()) 
 	{
-		std::cerr << "can't open the file: '" << argv[1] << std::endl;
+		std::cerr << "Error: Can't open the file: '" << argv[1] << "'. Please ensure the file exists and check its permissions." << std::endl;
 		return (1);
 	}
 	char	c;
 	std::string newFileContent;
-	while (!srcFile.eof() && srcFile.get(c)) 
+	while (srcFile.get(c)) 
 		newFileContent += c;
 	srcFile.close();
-
+	if (newFileContent.empty())
+	{
+		std::cerr << "Error: The file '" << argv[1] << "' is empty." << std::endl;
+		return (1);
+    }
 	std::string newFileName = std::string(argv[1]) + ".replace";
 	std::ofstream newFile(newFileName.c_str());
 	if (!newFile.is_open()) 
