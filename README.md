@@ -8,7 +8,7 @@ This module covers memory allocation, pointers, references, and switch statement
 
 For each exercise, navigate to its folder, compile, and run:
 
-### 📂 ex00
+📂 ex00
 
 ```bash
 cd ex00
