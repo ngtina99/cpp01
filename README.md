@@ -83,7 +83,7 @@ Filter Harl’s complaints by log level using a switch statement.
 
 
 ## 💼 Connect
-If you have any questions or suggestions, feel free to connect: 🔗 [LinkedIn: Valentina Nguyen](https://www.linkedin.com/in/valentina-nguyen-tina/)
+If you have any questions or suggestions, feel free to connect: 🔗 [LinkedIn: Valentina Nguyen](https://www.linkedin.com/in/valentina-nguyen-tina/) 🙋‍♀️
 
 ## 🖥️ System Compatibility
 This project was developed and tested on Linux (Ubuntu).
