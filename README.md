@@ -2,8 +2,6 @@
 
 This module covers memory allocation, pointers, references, and switch statements in C++. It includes hands-on exercises building classes and practicing fundamental C++ patterns.
 
----
-
 ## 🛠️ Usage
 
 For each exercise, navigate to its folder, compile, and run:
