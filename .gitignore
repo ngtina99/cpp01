@@ -5,10 +5,10 @@
 ex00/zombie
 ex01/zombiehorde
 ex02/brain
-ex03/brain
-ex04/brain
-ex05/brain
-ex06/brain
+ex03/weapon
+ex04/sed
+ex05/harl
+ex06/harlFilter
 
 # editor
 .vscode/
